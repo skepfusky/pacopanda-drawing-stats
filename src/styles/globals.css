@@ -1,0 +1,40 @@
+@import 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1:not(.hero),
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply relative w-fit before:content-[""] before:block before:h-[40%] before:absolute before:-right-1 before:-left-1 before:bottom-0 before:bg-green-400 before:-z-10 font-extrabold;
+  }
+
+  h1 {
+    @apply text-4xl;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  h4 {
+    @apply text-xl;
+  }
+
+  ul {
+    @apply list-inside list-disc;
+  }
+}
